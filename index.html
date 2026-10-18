@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2027 關西關懷之旅 | 京阪神企業員工旅遊企劃</title>
+    <title>2027 關西尊榮奢華之旅 | 29人專屬京阪神企業員工旅遊</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -17,8 +17,8 @@
                 extend: {
                     colors: {
                         jp: {
-                            dark: '#0f141c',
-                            card: '#18202c',
+                            dark: '#0a0e14',
+                            card: '#141c27',
                             red: '#e63946',
                             gold: '#d4af37',
                             goldHover: '#b89628',
@@ -36,40 +36,38 @@
     </script>
 
     <style>
-        /* Custom Glassmorphism Styles */
         .glass-panel {
-            background: rgba(24, 32, 44, 0.75);
+            background: rgba(20, 28, 39, 0.85);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(212, 175, 55, 0.15);
         }
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .glass-card:hover {
-            border-color: rgba(212, 175, 55, 0.4);
+            border-color: rgba(212, 175, 55, 0.5);
             transform: translateY(-4px);
-            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6);
         }
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #0f141c;
+            background: #0a0e14;
         }
         ::-webkit-scrollbar-thumb {
-            background: #2a364f;
+            background: #1f2a3a;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
             background: #d4af37;
         }
         .gold-gradient-text {
-            background: linear-gradient(135deg, #fff 0%, #d4af37 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f3e5ab 40%, #d4af37 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -78,23 +76,24 @@
 <body class="bg-jp-dark text-slate-100 font-sans antialiased selection:bg-jp-gold selection:text-jp-dark">
 
     <!-- Navigation Header -->
-    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-panel border-b border-slate-800/50">
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-panel border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-full bg-jp-red flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-jp-red/30">
                     京
                 </div>
                 <div>
-                    <span class="text-lg font-bold tracking-wider block leading-tight">2027 關西關懷之旅</span>
-                    <span class="text-xs text-jp-gold tracking-widest uppercase block">Keihanshin Corporate Trip</span>
+                    <span class="text-lg font-bold tracking-wider block leading-tight">2027 關西尊榮奢華之旅</span>
+                    <span class="text-xs text-jp-gold tracking-widest uppercase block">29人專屬包車包場 ✕ 每人 NT$ 60,000</span>
                 </div>
             </div>
             
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
                 <a href="#hero" class="hover:text-jp-gold transition-colors">首頁</a>
-                <a href="#calculator" class="hover:text-jp-gold transition-colors">預算試算</a>
-                <a href="#destinations" class="hover:text-jp-gold transition-colors">京阪神亮點</a>
-                <a href="#itinerary" class="hover:text-jp-gold transition-colors">推薦行程</a>
+                <a href="#overview" class="hover:text-jp-gold transition-colors">企劃總覽</a>
+                <a href="#hotels" class="hover:text-jp-gold transition-colors">奢華飯店陣容</a>
+                <a href="#itinerary" class="hover:text-jp-gold transition-colors">詳細行程安排</a>
+                <a href="#destinations" class="hover:text-jp-gold transition-colors">精選體驗</a>
                 <a href="#signup" class="bg-jp-gold text-jp-dark px-5 py-2.5 rounded-full font-bold hover:bg-jp-goldHover transition-all shadow-md shadow-jp-gold/20">意願登記</a>
             </nav>
 
@@ -107,213 +106,232 @@
         <!-- Mobile Menu Drawer -->
         <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
             <a href="#hero" class="block py-2 text-slate-200 hover:text-jp-gold">首頁</a>
-            <a href="#calculator" class="block py-2 text-slate-200 hover:text-jp-gold">預算試算</a>
-            <a href="#destinations" class="block py-2 text-slate-200 hover:text-jp-gold">京阪神亮點</a>
-            <a href="#itinerary" class="block py-2 text-slate-200 hover:text-jp-gold">推薦行程</a>
+            <a href="#overview" class="block py-2 text-slate-200 hover:text-jp-gold">企劃總覽</a>
+            <a href="#hotels" class="block py-2 text-slate-200 hover:text-jp-gold">奢華飯店陣容</a>
+            <a href="#itinerary" class="block py-2 text-slate-200 hover:text-jp-gold">詳細行程安排</a>
+            <a href="#destinations" class="block py-2 text-slate-200 hover:text-jp-gold">精選體驗</a>
             <a href="#signup" class="block py-2 text-jp-gold font-bold">意願登記</a>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2000&auto=format&fit=crop" 
                  alt="Kyoto Temple Background" 
-                 class="w-full h-full object-cover object-center opacity-30 scale-105 animate-pulse"
+                 class="w-full h-full object-cover object-center opacity-25 scale-105 animate-pulse"
                  style="animation-duration: 8s;"
-                 onerror="this.src='https://placehold.co/1920x1080/0f141c/ffffff?text=Kansai+Background'">
-            <div class="absolute inset-0 bg-gradient-to-t from-jp-dark via-jp-dark/60 to-transparent"></div>
+                 onerror="this.src='https://placehold.co/1920x1080/0a0e14/ffffff?text=Kansai+Luxury+Tour'">
+            <div class="absolute inset-0 bg-gradient-to-t from-jp-dark via-jp-dark/70 to-transparent"></div>
         </div>
 
         <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
-            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-jp-gold/30 text-jp-gold text-xs sm:text-sm font-medium mb-6 backdrop-blur-md">
-                <i class="fa-solid fa-plane-departure text-xs"></i>
-                <span>專為企業團隊打造的高質感關西奢華之旅</span>
+            <div class="inline-flex items-center space-x-2 px-5 py-2 rounded-full bg-slate-900/90 border border-jp-gold/50 text-jp-gold text-xs sm:text-sm font-medium mb-6 backdrop-blur-md shadow-lg">
+                <i class="fa-solid fa-crown text-jp-gold"></i>
+                <span>企業高規格客製：29 位貴賓專屬 ✕ 總預算 NT$ 1,740,000</span>
             </div>
             
             <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-                古都風情 ✕ 繁華美食 <br>
-                <span class="gold-gradient-text">2027 京阪神企業員工旅遊企劃</span>
+                古都風情 ✕ 極致奢華饗宴 <br>
+                <span class="gold-gradient-text">京阪神 29 人精緻充實旗艦之旅</span>
             </h1>
 
             <p class="text-slate-300 text-base sm:text-xl max-w-3xl mx-auto font-light leading-relaxed mb-10">
-                從京都千年的沉靜幽雅，到大阪無盡的熱情活力，再到神戶港灣的浪漫夜景與頂級和牛饗宴。為我們的團隊打造專屬的非凡體驗與珍貴回憶。
+                固定每人預算 <span class="text-jp-gold font-bold">NT$ 60,000</span>，結合充實不緊繃的景點切換、全區國際五星級飯店、有馬溫泉私人 Villa 湯屋、A5 神戶牛專屬鐵板包場與 USJ Express 全含方案。
             </p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#calculator" class="w-full sm:w-auto px-8 py-4 rounded-full bg-jp-gold text-jp-dark font-bold text-lg hover:bg-jp-goldHover transition-all duration-300 shadow-xl shadow-jp-gold/20 flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-calculator"></i>
-                    <span>立即體驗預算/行程試算</span>
+                <a href="#itinerary" class="w-full sm:w-auto px-8 py-4 rounded-full bg-jp-gold text-jp-dark font-bold text-lg hover:bg-jp-goldHover transition-all duration-300 shadow-xl shadow-jp-gold/20 flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-route"></i>
+                    <span>探索全新擴充 5 天行程</span>
                 </a>
-                <a href="#signup" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-800/80 text-white border border-slate-700 hover:border-jp-gold hover:text-jp-gold font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-2">
-                    <i class="fa-solid fa-clipboard-list"></i>
-                    <span>填寫參與意願</span>
+                <a href="#hotels" class="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-800/80 text-white border border-slate-700 hover:border-jp-gold hover:text-jp-gold font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-hotel"></i>
+                    <span>查看住宿飯店規格</span>
                 </a>
             </div>
 
-            <!-- Quick Stats -->
+            <!-- Key Specs Display -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto">
-                <div class="glass-panel p-4 rounded-2xl text-center">
-                    <div class="text-jp-gold text-2xl font-bold">5 天 4 夜</div>
-                    <div class="text-xs text-slate-400 mt-1">黃金精華行程</div>
+                <div class="glass-panel p-5 rounded-2xl text-center border-t-2 border-jp-gold">
+                    <div class="text-jp-gold text-2xl font-bold">29 人</div>
+                    <div class="text-xs text-slate-400 mt-1">團隊固定人數</div>
                 </div>
-                <div class="glass-panel p-4 rounded-2xl text-center">
-                    <div class="text-jp-gold text-2xl font-bold">3 大名城</div>
-                    <div class="text-xs text-slate-400 mt-1">京都 / 大阪 / 神戶</div>
+                <div class="glass-panel p-5 rounded-2xl text-center border-t-2 border-jp-gold">
+                    <div class="text-jp-gold text-2xl font-bold">NT$ 60,000</div>
+                    <div class="text-xs text-slate-400 mt-1">單人預算金額</div>
                 </div>
-                <div class="glass-panel p-4 rounded-2xl text-center">
-                    <div class="text-jp-gold text-2xl font-bold">全程專車</div>
-                    <div class="text-xs text-slate-400 mt-1">接送與高級客製</div>
+                <div class="glass-panel p-5 rounded-2xl text-center border-t-2 border-jp-gold">
+                    <div class="text-jp-gold text-2xl font-bold">雙景點充實版</div>
+                    <div class="text-xs text-slate-400 mt-1">深度與豐富度加倍</div>
                 </div>
-                <div class="glass-panel p-4 rounded-2xl text-center">
-                    <div class="text-jp-gold text-2xl font-bold">米其林/和牛</div>
-                    <div class="text-xs text-slate-400 mt-1">極致饗宴體驗</div>
+                <div class="glass-panel p-5 rounded-2xl text-center border-t-2 border-jp-gold">
+                    <div class="text-jp-gold text-2xl font-bold">米其林 / A5神戶牛</div>
+                    <div class="text-xs text-slate-400 mt-1">獨立包場頂級餐膳</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Calculator & Filter Section -->
-    <section id="calculator" class="py-20 relative z-10 border-t border-slate-800/80">
+    <!-- Executive Overview Section -->
+    <section id="overview" class="py-20 relative z-10 border-t border-slate-800/80 bg-slate-900/40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4">
-                    <span class="text-jp-gold"><i class="fa-solid fa-sliders mr-2"></i>智慧型</span> 預算與人數試算推薦
+                <span class="text-jp-gold text-sm font-semibold uppercase tracking-widest">Plan Breakdown</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2">
+                    <span class="text-jp-gold"><i class="fa-solid fa-gem mr-2"></i>NT$ 60,000</span> 尊榮企劃內容總覽
                 </h2>
-                <p class="text-slate-400 max-w-2xl mx-auto">
-                    選擇貴部門/公司的預計參與人數與每人預算級距，系統將即時試算總預算並提供專屬推薦規劃。
+                <p class="text-slate-400 max-w-2xl mx-auto mt-2">
+                    總預算 <span class="text-jp-gold font-bold">NT$ 1,740,000</span> 完全投入提升行程體驗豐富度、餐膳等級與住宿規格，不放過任何經典細節。
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <!-- Input Controls (Left Column) -->
-                <div class="lg:col-span-5 glass-panel p-6 sm:p-8 rounded-3xl space-y-8 border-l-4 border-l-jp-gold">
-                    
-                    <!-- 1. Number of People -->
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-300 mb-3 flex items-center justify-between">
-                            <span><i class="fa-solid fa-users text-jp-gold mr-2"></i>預計參與人數</span>
-                            <span id="people-count-display" class="text-jp-gold font-bold text-lg">25 人</span>
-                        </label>
-                        <input type="range" id="people-slider" min="5" max="100" step="5" value="25" 
-                               class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-jp-gold">
-                        <div class="flex justify-between text-xs text-slate-500 mt-2">
-                            <span>5人 (小團體)</span>
-                            <span>30人 (部門)</span>
-                            <span>50人+ (全公司)</span>
-                            <span>100人</span>
-                        </div>
+                <div class="glass-panel p-6 rounded-3xl border-t-4 border-jp-gold relative">
+                    <div class="w-12 h-12 rounded-2xl bg-jp-gold/20 text-jp-gold flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-hotel"></i>
                     </div>
-
-                    <!-- 2. Budget Level Selector -->
-                    <div>
-                        <label class="block text-sm font-semibold text-slate-300 mb-3">
-                            <i class="fa-solid fa-sack-dollar text-jp-gold mr-2"></i>每人預算級距 (TWD)
-                        </label>
-                        <div class="grid grid-cols-1 gap-3">
-                            <button type="button" data-budget="30000" class="budget-option-btn text-left p-4 rounded-xl border border-slate-700 hover:border-jp-gold transition-all flex justify-between items-center bg-slate-800/50">
-                                <div>
-                                    <div class="font-bold text-slate-200">超值精緻型</div>
-                                    <div class="text-xs text-slate-400">$25,000 ~ $35,000 / 人</div>
-                                </div>
-                                <i class="fa-regular fa-circle-check text-slate-600 text-xl check-icon"></i>
-                            </button>
-
-                            <button type="button" data-budget="40000" class="budget-option-btn text-left p-4 rounded-xl border border-jp-gold bg-jp-gold/10 transition-all flex justify-between items-center active">
-                                <div>
-                                    <div class="font-bold text-jp-gold">豪華熱門型 (推薦)</div>
-                                    <div class="text-xs text-slate-300">$35,000 ~ $45,000 / 人</div>
-                                </div>
-                                <i class="fa-solid fa-circle-check text-jp-gold text-xl check-icon"></i>
-                            </button>
-
-                            <button type="button" data-budget="55000" class="budget-option-btn text-left p-4 rounded-xl border border-slate-700 hover:border-jp-gold transition-all flex justify-between items-center bg-slate-800/50">
-                                <div>
-                                    <div class="font-bold text-slate-200">頂級奢華旗艦型</div>
-                                    <div class="text-xs text-slate-400">$45,000 以上 / 人</div>
-                                </div>
-                                <i class="fa-regular fa-circle-check text-slate-600 text-xl check-icon"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Total Estimated Budget Display Card -->
-                    <div class="bg-slate-900/80 p-5 rounded-2xl border border-slate-800">
-                        <span class="text-xs text-slate-400 uppercase tracking-widest block mb-1">預估團體總預算概算</span>
-                        <div class="flex items-baseline space-x-2">
-                            <span class="text-slate-400 text-sm">NT$</span>
-                            <span id="total-budget-display" class="text-3xl sm:text-4xl font-extrabold text-jp-gold">1,000,000</span>
-                        </div>
-                        <p class="text-xs text-slate-500 mt-2">* 實際費用將視具體出發日期、航班時間與最終飯店訂房結果調整。</p>
-                    </div>
-
+                    <h3 class="text-xl font-bold text-slate-100 mb-2">國際五星 ✕ 名湯Villa</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        全程入住大阪五星級酒店、神戶港灣景觀飯店，以及有馬溫泉獨立湯屋 Villa，享受無與倫比的舒適與尊榮感。
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-jp-gold mr-2"></i>大阪麗思卡爾頓 / 洲際酒店 2晚</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-jp-gold mr-2"></i>有馬溫泉奢華 Villa 獨立湯屋 1晚</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-jp-gold mr-2"></i>神戶美利堅公園東方酒店 1晚</li>
+                    </ul>
                 </div>
 
-                <!-- Dynamic Recommendations Card Output (Right Column) -->
-                <div class="lg:col-span-7 glass-panel p-6 sm:p-8 rounded-3xl space-y-6">
-                    <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-                        <h3 class="text-xl font-bold flex items-center text-slate-100">
-                            <i class="fa-solid fa-wand-magic-sparkles text-jp-gold mr-2"></i>
-                            根據您的需求，推薦企劃配置
-                        </h3>
-                        <span class="text-xs bg-jp-gold/20 text-jp-gold px-3 py-1 rounded-full font-semibold" id="recommend-tag">豪華尊榮版</span>
+                <div class="glass-panel p-6 rounded-3xl border-t-4 border-jp-gold relative">
+                    <div class="w-12 h-12 rounded-2xl bg-jp-gold/20 text-jp-gold flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-utensils"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-slate-100 mb-2">頂級餐膳包場秀</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        嚴選關西最高檔餐飲食材，包含 29 人專屬 A5 神戶牛鐵板燒主廚秀、米其林會席與神戶港私人遊艇餐會。
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-jp-gold mr-2"></i>A5神戶牛（BMS 10+）鐵板包場</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-jp-gold mr-2"></i>京都米其林懷石 / 豆腐湯花套餐</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-jp-gold mr-2"></i>道頓堀蟹肉海鮮歡慶包場宴</li>
+                    </ul>
+                </div>
 
-                    <!-- Recommended Features Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        
-                        <!-- Hotel -->
-                        <div class="glass-card p-4 rounded-2xl">
-                            <div class="text-jp-gold text-sm font-semibold mb-1 flex items-center">
-                                <i class="fa-solid fa-hotel mr-2"></i> 住宿星級規格
-                            </div>
-                            <div id="rec-hotel" class="font-bold text-slate-200 text-base">4星市中心高評分飯店 + 1晚有馬溫泉會館</div>
-                            <div id="rec-hotel-desc" class="text-xs text-slate-400 mt-1">兼具交通便利與日式極致溫泉放鬆饗宴。</div>
-                        </div>
-
-                        <!-- Transport -->
-                        <div class="glass-card p-4 rounded-2xl">
-                            <div class="text-jp-gold text-sm font-semibold mb-1 flex items-center">
-                                <i class="fa-solid fa-bus mr-2"></i> 交通接駁方式
-                            </div>
-                            <div id="rec-transport" class="font-bold text-slate-200 text-base">全程專屬大巴遊覽車包車</div>
-                            <div id="rec-transport-desc" class="text-xs text-slate-400 mt-1">專屬司機、免拖行李轉車，輕鬆直達景點。</div>
-                        </div>
-
-                        <!-- Dining -->
-                        <div class="glass-card p-4 rounded-2xl">
-                            <div class="text-jp-gold text-sm font-semibold mb-1 flex items-center">
-                                <i class="fa-solid fa-utensils mr-2"></i> 經典餐食安排
-                            </div>
-                            <div id="rec-dining" class="font-bold text-slate-200 text-base">A5神戶牛晚宴 + 京都懷石料理</div>
-                            <div id="rec-dining-desc" class="text-xs text-slate-400 mt-1">包含獨立包廂晚宴與歡慶團隊餐會。</div>
-                        </div>
-
-                        <!-- Highlights -->
-                        <div class="glass-card p-4 rounded-2xl">
-                            <div class="text-jp-gold text-sm font-semibold mb-1 flex items-center">
-                                <i class="fa-solid fa-star mr-2"></i> 專屬活動亮點
-                            </div>
-                            <div id="rec-highlights" class="font-bold text-slate-200 text-base">USJ 快速通關 + 清水寺導覽</div>
-                            <div id="rec-highlights-desc" class="text-xs text-slate-400 mt-1">包含日本環球影城門票與特色和服體驗。</div>
-                        </div>
-
+                <div class="glass-panel p-6 rounded-3xl border-t-4 border-jp-gold relative">
+                    <div class="w-12 h-12 rounded-2xl bg-jp-gold/20 text-jp-gold flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-van-shuttle"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-slate-100 mb-2">專車接送 ✕ VVIP體驗</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        全程由 29 人專屬豪華大巴接送，包含行李直送與雙語導遊，影城樂園安排 Express 快速通關保證無憂。
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-jp-gold mr-2"></i>29人全程獨立豪華巴士與司機</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-jp-gold mr-2"></i>USJ Express 快速通關直入任天堂</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-jp-gold mr-2"></i>神戶港 29人私人遊艇夕陽包船</li>
+                    </ul>
+                </div>
 
-                    <!-- Key Activity Checklist -->
-                    <div class="bg-slate-900/50 p-5 rounded-2xl border border-slate-800">
-                        <div class="text-sm font-semibold text-slate-300 mb-3">客製化行程特色包：</div>
-                        <ul id="rec-checklist" class="space-y-2 text-xs sm:text-sm text-slate-300">
-                            <!-- Populated via JavaScript -->
-                        </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Hotels Section -->
+    <section id="hotels" class="py-20 border-t border-slate-800 bg-jp-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-jp-gold text-sm font-semibold uppercase tracking-widest">Luxury Accommodations</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2">全程奢華住宿詳細陣容</h2>
+                <p class="text-slate-400 mt-2 max-w-2xl mx-auto">嚴選關西地區頂級五星與日式溫泉旅館，讓 29 位成員獲得最極致的休養與尊榮感</p>
+            </div>
+
+            <div class="space-y-12">
+                
+                <!-- Hotel 1: Osaka -->
+                <div class="glass-panel rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 border border-jp-gold/30">
+                    <div class="lg:col-span-5 relative h-64 lg:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1000&auto=format&fit=crop" 
+                             alt="The Ritz-Carlton Osaka" class="w-full h-full object-cover"
+                             onerror="this.src='https://placehold.co/800x600/141c27/ffffff?text=Osaka+Luxury+Hotel'">
+                        <span class="absolute top-4 left-4 bg-jp-gold text-jp-dark font-bold text-xs px-3 py-1.5 rounded-full shadow-lg">
+                            第 1 ~ 2 晚 ✕ 大阪市中心
+                        </span>
                     </div>
+                    <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-2xl font-bold text-white">大阪麗思卡爾頓酒店 / 大阪洲際酒店</h3>
+                                <span class="text-jp-gold text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <p class="text-xs text-jp-gold font-semibold mb-4">The Ritz-Carlton, Osaka / InterContinental Osaka (高樓層奢華景觀房)</p>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                坐落於梅田黃金地段，以18世紀英式莊園的典雅風格著稱。飯店提供奢華的大理石浴室、羽絨床寢與高空市景視角。鄰近梅田購物商圈，交通極為便利，為團隊提供最頂級的大陸現代奢華放鬆空間。
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-slate-800 pt-4 text-xs text-slate-400">
+                            <div><i class="fa-solid fa-wifi text-jp-gold mr-1.5"></i>全館高速Wi-Fi</div>
+                            <div><i class="fa-solid fa-spa text-jp-gold mr-1.5"></i>SPA與恆溫泳池</div>
+                            <div><i class="fa-solid fa-martini-glass-citrus text-jp-gold mr-1.5"></i>高空行政酒廊</div>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="pt-2 text-right">
-                        <a href="#signup" class="inline-flex items-center text-jp-gold font-semibold text-sm hover:underline">
-                            以這個預算配置進行意願登記 <i class="fa-solid fa-arrow-right ml-2"></i>
-                        </a>
+                <!-- Hotel 2: Arima Onsen -->
+                <div class="glass-panel rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 border border-jp-gold/30">
+                    <div class="lg:col-span-5 relative h-64 lg:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Arima Onsen Villa" class="w-full h-full object-cover"
+                             onerror="this.src='https://placehold.co/800x600/141c27/ffffff?text=Arima+Onsen+Villa'">
+                        <span class="absolute top-4 left-4 bg-jp-gold text-jp-dark font-bold text-xs px-3 py-1.5 rounded-full shadow-lg">
+                            第 3 晚 ✕ 日本三大古湯
+                        </span>
+                    </div>
+                    <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-2xl font-bold text-white">有馬溫泉 月光園 / 兵衛向陽閣 尊榮 Villa 套房</h3>
+                                <span class="text-jp-gold text-sm"><i class="fa-solid fa-hot-tub-person mr-1"></i>日式頂級溫泉旅宿</span>
+                            </div>
+                            <p class="text-xs text-jp-gold font-semibold mb-4">Gekkoden / Takatori Arima Grand Hotel Villa (含私人風呂/房內宴席)</p>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                入住擁有數百年歷史的日本古湯名宿。每房配備獨立金湯/銀湯風呂或免費預約私人露天風呂。晚間於獨立包廂享用由專屬服務員（女將）服務的一對一日式懷石料理，極致感受日式款待之道（Omotenashi）。
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-slate-800 pt-4 text-xs text-slate-400">
+                            <div><i class="fa-solid fa-water text-jp-gold mr-1.5"></i>金湯與銀湯雙名湯</div>
+                            <div><i class="fa-solid fa-utensils text-jp-gold mr-1.5"></i>房內/獨立會席料理</div>
+                            <div><i class="fa-solid fa-tree text-jp-gold mr-1.5"></i>私人庭園景觀</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hotel 3: Kobe Port -->
+                <div class="glass-panel rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 border border-jp-gold/30">
+                    <div class="lg:col-span-5 relative h-64 lg:h-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1528164344705-475426879e0d?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Kobe Harbor Hotel" class="w-full h-full object-cover"
+                             onerror="this.src='https://placehold.co/800x600/141c27/ffffff?text=Kobe+Port+Hotel'">
+                        <span class="absolute top-4 left-4 bg-jp-gold text-jp-dark font-bold text-xs px-3 py-1.5 rounded-full shadow-lg">
+                            第 4 晚 ✕ 神戶無敵港景
+                        </span>
+                    </div>
+                    <div class="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-2xl font-bold text-white">神戶美利堅公園東方酒店</h3>
+                                <span class="text-jp-gold text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <p class="text-xs text-jp-gold font-semibold mb-4">Kobe Meriken Park Oriental Hotel (270度環景海景陽台房)</p>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                三面環海的獨特郵輪造型奢華地標酒店。29位成員全數升等全海景陽台房，房間可直接遙望神戶港塔與繽紛摩天輪夜景。傍晚方便直接步行至私人遊艇碼頭，享受無縫接軌的尊榮體驗。
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-slate-800 pt-4 text-xs text-slate-400">
+                            <div><i class="fa-solid fa-water text-jp-gold mr-1.5"></i>私人海景陽台</div>
+                            <div><i class="fa-solid fa-ship text-jp-gold mr-1.5"></i>直通私人碼頭</div>
+                            <div><i class="fa-solid fa-moon text-jp-gold mr-1.5"></i>神戶百萬夜景</div>
+                        </div>
                     </div>
                 </div>
 
@@ -321,18 +339,191 @@
         </div>
     </section>
 
-    <!-- Destination Highlights Tabs -->
-    <section id="destinations" class="py-20 bg-slate-900/60 border-t border-slate-800">
+    <!-- Itinerary Timeline Section (EXPANDED & ENHANCED) -->
+    <section id="itinerary" class="py-20 border-t border-slate-800 bg-slate-900/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-jp-gold text-sm font-semibold uppercase tracking-widest">Optimized Schedule</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2">29人尊榮升級版 5 天 4 夜 流暢動線行程安排</h2>
+                <p class="text-slate-400 mt-2">真實交通精算：車程嚴格控管、用餐時間拉長至 2~2.5 小時，確保尊榮慢活體驗</p>
+            </div>
+
+            <!-- Timeline Structure -->
+            <div class="relative border-l-2 border-jp-gold/40 ml-4 md:ml-32 space-y-12">
+                
+                <!-- Day 1 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-jp-gold flex items-center justify-center text-jp-dark text-xs font-bold shadow-lg">1</div>
+                    <div class="hidden md:block absolute -left-32 top-0 text-jp-gold text-sm font-bold w-24 text-right">DAY 1</div>
+                    
+                    <div class="glass-panel p-6 sm:p-8 rounded-3xl border-l-4 border-l-jp-gold space-y-4">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <span class="text-xs bg-jp-gold text-jp-dark px-3 py-1 rounded-full font-bold">啟程 ✕ 地標巡禮 ✕ 2.5小時蟹宴沉浸體驗</span>
+                            <span class="text-xs text-slate-400"><i class="fa-solid fa-bus mr-1 text-jp-gold"></i>機場專車接送約 50 分鐘進市區</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-100">關西機場禮遇接關 ➔ 大阪城護城河御座船 ➔ 梅田空中庭園 ➔ 道頓堀蟹肉海鮮包場宴</h3>
+                        
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <p><strong class="text-jp-gold">【08:30 - 12:30】</strong> 搭乘國籍航空早班機抵達關西國際機場 (KIX)，專人快速協助出關與行李搬運。</p>
+                            <p><strong class="text-jp-gold">【13:00 - 17:30】</strong> 搭乘 29 人專屬豪華大巴前往市區（約50分鐘）。安排搭乘【大阪城公園金色御座船】漫遊護城河，隨後前往【梅田藍天大廈空中庭園】俯瞰大阪高空夕陽美景，再至大阪五星飯店進房稍作休息。</p>
+                            <p><strong class="text-jp-gold">【18:30 - 21:00 (充裕2.5小時)】</strong> 專車前往道頓堀頂級蟹料理名店包廂，享用「29人迎賓歡慶晚宴」。預留 2.5 小時充裕時間品嚐活體帝王蟹/松葉蟹鍋物、刺身與日式清酒無限暢飲，輕鬆交流不趕時間。</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-slate-800/80 text-xs text-slate-400">
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <span class="text-jp-gold font-bold block mb-1"><i class="fa-solid fa-utensils mr-1"></i> 餐膳安排</span>
+                                午餐: 機上精緻餐點 / 晚餐: 道頓堀蟹道樂專屬包廂歡慶宴 (充裕2.5小時)
+                            </div>
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <span class="text-jp-gold font-bold block mb-1"><i class="fa-solid fa-bed mr-1"></i> 飯店住宿</span>
+                                大阪麗思卡爾頓酒店 / 大阪洲際酒店
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-jp-gold flex items-center justify-center text-jp-dark text-xs font-bold shadow-lg">2</div>
+                    <div class="hidden md:block absolute -left-32 top-0 text-jp-gold text-sm font-bold w-24 text-right">DAY 2</div>
+                    
+                    <div class="glass-panel p-6 sm:p-8 rounded-3xl border-l-4 border-l-jp-gold space-y-4">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <span class="text-xs bg-jp-gold text-jp-dark px-3 py-1 rounded-full font-bold">歡樂 ✕ Express 7 免排隊 ✕ 居酒屋放鬆包場</span>
+                            <span class="text-xs text-slate-400"><i class="fa-solid fa-ticket mr-1 text-jp-gold"></i>含任天堂與哈利波特快速通關</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-100">日本環球影城 USJ 全日暢玩 ➔ 心齋橋 / 道頓堀夜間散策 ➔ 高級居酒屋包場美饌</h3>
+                        
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <p><strong class="text-jp-gold">【09:00 - 17:30】</strong> 專車接送（約25分鐘）至【日本環球影城 USJ】。全體成員獲配「Express 7 快速通關券」，免排隊直入「超級任天堂世界」與「哈利波特禁忌之旅」，園區內發放高額餐券自由享用美饌。</p>
+                            <p><strong class="text-jp-gold">【18:00 - 19:30】</strong> 專車接送至【心齋橋與道頓堀商圈】，悠閒微逛藥妝、潮流服飾與打卡地標。</p>
+                            <p><strong class="text-jp-gold">【19:30 - 22:00 (充裕2.5小時)】</strong> 於心齋橋高級居酒屋包場，提供頂級串燒、和牛塔塔與多款特調酒飲，預留 2.5 小時時間讓團隊自在歡聚，無後顧之憂。</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-slate-800/80 text-xs text-slate-400">
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <span class="text-jp-gold font-bold block mb-1"><i class="fa-solid fa-utensils mr-1"></i> 餐膳安排</span>
+                                早餐: 飯店豪華自助早餐 / 午餐: 園區自由享用(發放高額餐券) / 晚餐: 心齋橋高級居酒屋包場 (2.5小時)
+                            </div>
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <span class="text-jp-gold font-bold block mb-1"><i class="fa-solid fa-bed mr-1"></i> 飯店住宿</span>
+                                大阪麗思卡爾頓酒店 / 大阪洲際酒店
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-jp-gold flex items-center justify-center text-jp-dark text-xs font-bold shadow-lg">3</div>
+                    <div class="hidden md:block absolute -left-32 top-0 text-jp-gold text-sm font-bold w-24 text-right">DAY 3</div>
+                    
+                    <div class="glass-panel p-6 sm:p-8 rounded-3xl border-l-4 border-l-jp-gold space-y-4">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <span class="text-xs bg-jp-gold text-jp-dark px-3 py-1 rounded-full font-bold">人文 ✕ 京都古都寫真 ✕ 2小時女將溫泉會席</span>
+                            <span class="text-xs text-slate-400"><i class="fa-solid fa-clock mr-1 text-jp-gold"></i>動線流暢，傍晚17:30早進有馬Villa</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-100">清水寺（高級和服寫真漫遊） ➔ 嵐山竹林小徑 & 米其林豆腐饗宴 ➔ 伏見稻荷 ➔ 有馬溫泉 Villa 懷石宴</h3>
+                        
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <p><strong class="text-jp-gold">【09:00 - 12:00】</strong> 大阪專車前往京都【清水寺】（車程約50分鐘）。安排 29 人專屬高級和服換裝與專屬隨行攝影師，進行 2.5 小時質感寫真漫遊。</p>
+                            <p><strong class="text-jp-gold">【12:30 - 14:30 (充裕2小時)】</strong> 前往嵐山（車程約30分鐘），預留 2 小時品嚐京都米其林推薦「豆腐湯花會席料理」，感受精緻飲食美學。</p>
+                            <p><strong class="text-jp-gold">【14:30 - 16:00】</strong> 漫步【嵐山竹林小徑】與渡月橋，享用限定抹茶冰淇淋。</p>
+                            <p><strong class="text-jp-gold">【16:30 - 17:30】</strong> 順路前往【伏見稻荷大社】拍攝千本鳥居團體照，隨後走高速公路（約50分鐘）直達【有馬溫泉】。</p>
+                            <p><strong class="text-jp-gold">【18:30 - 21:00 (充裕2.5小時)】</strong> 於有馬 Villa 獨立會席包廂，享受 2.5 小時由女將一對一服務的高級日式懷石晚餐與名湯風呂。</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-slate-800/80 text-xs text-slate-400">
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <span class="text-jp-gold font-bold block mb-1"><i class="fa-solid fa-utensils mr-1"></i> 餐膳安排</span>
+                                早餐: 飯店自助餐 / 午餐: 京都米其林豆腐會席 (2小時) / 晚餐: 有馬溫泉頂級懷石料理 (2.5小時)
+                            </div>
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <span class="text-jp-gold font-bold block mb-1"><i class="fa-solid fa-bed mr-1"></i> 飯店住宿</span>
+                                有馬溫泉 月光園 / 兵衛向陽閣 尊榮 Villa
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 4 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-jp-gold flex items-center justify-center text-jp-dark text-xs font-bold shadow-lg">4</div>
+                    <div class="hidden md:block absolute -left-32 top-0 text-jp-gold text-sm font-bold w-24 text-right">DAY 4</div>
+                    
+                    <div class="glass-panel p-6 sm:p-8 rounded-3xl border-l-4 border-l-jp-gold space-y-4">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <span class="text-xs bg-jp-gold text-jp-dark px-3 py-1 rounded-full font-bold">奢華 ✕ 海陸雙饗宴 ✕ 2.5小時A5神戶牛主廚秀</span>
+                            <span class="text-xs text-slate-400"><i class="fa-solid fa-car mr-1 text-jp-gold"></i>神戶市區內流暢短途接駁</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-100">北野異人館街 ➔ 六甲山纜車俯瞰港灣 ➔ 神戶港私人遊艇夕陽派對 ➔ A5神戶牛鐵板包場秀</h3>
+                        
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <p><strong class="text-jp-gold">【09:30 - 12:00】</strong> 從有馬溫泉出發（約25分鐘）抵達【北野異人館街】漫步與品嚐精品手沖咖啡。</p>
+                            <p><strong class="text-jp-gold">【12:30 - 15:00 (充裕2.5小時)】</strong> 搭乘【六甲山景觀纜車】前往展望台，於景觀餐廳充裕享用 2.5 小時精緻日法洋食午宴與高空港灣全景。</p>
+                            <p><strong class="text-jp-gold">【16:00 - 18:00】</strong> 專屬包租 29 人豪華遊艇出海，於神戶港灣舉辦「夕陽香檳派對」。</p>
+                            <p><strong class="text-jp-gold">【18:30 - 21:00 (充裕2.5小時)】</strong> 專屬包場神戶頂級鐵板燒，預留 2.5 小時由資深主廚現場烹調 BMS 10+ 【A5 神戶牛】，欣賞頂級刀工與火焰秀，慢品奢華牛肉風味。</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-slate-800/80 text-xs text-slate-400">
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <span class="text-jp-gold font-bold block mb-1"><i class="fa-solid fa-utensils mr-1"></i> 餐膳安排</span>
+                                早餐: 旅館日式朝食 / 午餐: 六甲山景觀餐廳洋食 (2.5小時) / 晚餐: A5神戶牛鐵板包場晚宴 (2.5小時)
+                            </div>
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <span class="text-jp-gold font-bold block mb-1"><i class="fa-solid fa-bed mr-1"></i> 飯店住宿</span>
+                                神戶美利堅公園東方酒店 (全港景陽台房)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 5 -->
+                <div class="relative pl-8 md:pl-10">
+                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-jp-gold flex items-center justify-center text-jp-dark text-xs font-bold shadow-lg">5</div>
+                    <div class="hidden md:block absolute -left-32 top-0 text-jp-gold text-sm font-bold w-24 text-right">DAY 5</div>
+                    
+                    <div class="glass-panel p-6 sm:p-8 rounded-3xl border-l-4 border-l-jp-gold space-y-4">
+                        <div class="flex flex-wrap justify-between items-center gap-2">
+                            <span class="text-xs bg-jp-gold text-jp-dark px-3 py-1 rounded-full font-bold">購物 ✕ 滿載尊榮賦歸</span>
+                            <span class="text-xs text-slate-400"><i class="fa-solid fa-plane-departure mr-1 text-jp-gold"></i>機場禮遇快速通關服務</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-100">臨空城 Rinku Outlet 免稅採買 ➔ 關西機場禮遇辦理 ➔ 返抵台灣</h3>
+                        
+                        <div class="space-y-3 text-sm text-slate-300">
+                            <p><strong class="text-jp-gold">【09:00 - 13:00】</strong> 飯店享用港景自助早餐後，專車與行李直達【Rinku Premium Outlets】，自由採買國際精品與在地伴手禮。</p>
+                            <p><strong class="text-jp-gold">【13:30 - 18:00】</strong> 專車送往關西國際機場 (KIX)，專人協助快速辦理托運與退稅，搭乘班機平安返抵台灣。</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-slate-800/80 text-xs text-slate-400">
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <span class="text-jp-gold font-bold block mb-1"><i class="fa-solid fa-utensils mr-1"></i> 餐膳安排</span>
+                                早餐: 飯店海景自助早餐 / 午餐: Outlet自由選購 / 晚餐: 機上精緻餐點
+                            </div>
+                            <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                                <span class="text-jp-gold font-bold block mb-1"><i class="fa-solid fa-house-flag mr-1"></i> 溫馨返家</span>
+                                帶著滿滿回憶與戰利品平安返抵台灣
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Highlights Showcase -->
+    <section id="destinations" class="py-20 bg-jp-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <span class="text-jp-gold text-sm font-semibold uppercase tracking-widest">Kansai Top Sights</span>
-                <h2 class="text-3xl sm:text-4xl font-bold mt-2">京阪神 城市亮點介紹</h2>
-                <p class="text-slate-400 mt-2">包含古都人文、繁華購物與奢華港灣的三重享受</p>
+                <span class="text-jp-gold text-sm font-semibold uppercase tracking-widest">Kansai VVIP Experiences</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2">京阪神 29人專屬亮點</h2>
+                <p class="text-slate-400 mt-2">專門為 29 人團隊設計的專屬體驗與包場服務</p>
             </div>
 
             <!-- Tab Buttons -->
             <div class="flex justify-center mb-10">
-                <div class="inline-flex p-1.5 rounded-2xl bg-slate-800/80 border border-slate-700">
+                <div class="inline-flex p-1.5 rounded-2xl bg-slate-900 border border-slate-800">
                     <button class="city-tab-btn active px-6 py-2.5 rounded-xl font-bold text-sm transition-all bg-jp-gold text-jp-dark" data-target="kyoto">
                         <i class="fa-solid fa-torii-gate mr-2"></i>京都 (Kyoto)
                     </button>
@@ -346,149 +537,144 @@
             </div>
 
             <!-- Tab Contents -->
-            
-            <!-- Kyoto Content -->
             <div id="kyoto" class="city-content grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
                 <div class="glass-card rounded-2xl overflow-hidden group">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=800&auto=format&fit=crop" 
                              alt="Kiyomizu-dera" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x400/18202c/ffffff?text=Kiyomizu-dera'">
-                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">歷史世界遺產</span>
+                             onerror="this.src='https://placehold.co/600x400/141c27/ffffff?text=Kyoto+Kimono'">
+                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">隨行攝影師</span>
                     </div>
                     <div class="p-5">
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">清水寺 & 祇園漫步</h3>
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">清水寺 & 高階和服寫真</h3>
                         <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                            站在木造的清水舞台俯瞰京都市區，穿著經典日式和服漫步於石板小徑二三年坂，體驗經典的古都氛圍。
+                            漫步二年坂與三年坂，團隊配有專屬隨行攝影師，記錄 29 人古風寫真印象。
                         </p>
                     </div>
                 </div>
-                <!-- Card 2 -->
+
                 <div class="glass-card rounded-2xl overflow-hidden group">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800&auto=format&fit=crop" 
                              alt="Fushimi Inari" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x400/18202c/ffffff?text=Fushimi+Inari'">
-                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">打卡熱點</span>
+                             onerror="this.src='https://placehold.co/600x400/141c27/ffffff?text=Fushimi+Inari'">
+                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">經典打卡</span>
                     </div>
                     <div class="p-5">
                         <h3 class="text-xl font-bold mb-2 text-slate-100">伏見稻荷大社 千本鳥居</h3>
                         <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                            綿延山林間的朱紅色千本鳥居，為團隊拍攝壯觀充滿記憶點的團體大合照最佳選擇。
+                            穿梭於壯觀朱紅鳥居，安排清幽時段，拍攝震撼的 29 人團隊合照。
                         </p>
                     </div>
                 </div>
-                <!-- Card 3 -->
+
                 <div class="glass-card rounded-2xl overflow-hidden group">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1624253321171-1be53e12f5f4?q=80&w=800&auto=format&fit=crop" 
-                             alt="Arashiyama Bamboo Grove" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x400/18202c/ffffff?text=Arashiyama'">
-                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">自然靜謐</span>
+                             alt="Arashiyama" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/141c27/ffffff?text=Arashiyama'">
+                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">米其林饗宴</span>
                     </div>
                     <div class="p-5">
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">嵐山竹林之道 & 渡月橋</h3>
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">嵐山竹林漫步 & 豆腐湯花美饌</h3>
                         <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                            沉浸於竹林風吹聲響的療癒感，搭乘小火車享受季節美景，讓平時高壓的工作情緒得到完全放鬆。
+                            漫步渡月橋與竹林小徑，享用精緻日式豆腐懷石，體驗京料理的細緻口感與禪意哲學。
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Osaka Content (Hidden by default) -->
+            <!-- Osaka Content -->
             <div id="osaka" class="city-content hidden grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
                 <div class="glass-card rounded-2xl overflow-hidden group">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?q=80&w=800&auto=format&fit=crop" 
-                             alt="USJ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x400/18202c/ffffff?text=USJ'">
-                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">主題樂園</span>
+                             alt="USJ Express" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/141c27/ffffff?text=USJ+Express'">
+                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">Express 7 全快通</span>
                     </div>
                     <div class="p-5">
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">日本環球影城 USJ</h3>
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">日本環球影城 USJ 全快通</h3>
                         <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                            體驗超級任天堂世界與哈利波特的魔法世界！可特別安排快速通關，享受無壓力的暢玩體驗。
+                            包含快速通關 Express 7，直接保證進入任天堂世界與哈利波特，免排隊暢玩熱門設施。
                         </p>
                     </div>
                 </div>
-                <!-- Card 2 -->
+
                 <div class="glass-card rounded-2xl overflow-hidden group">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1578637387939-43c525550085?q=80&w=800&auto=format&fit=crop" 
-                             alt="Dotonbori" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x400/18202c/ffffff?text=Dotonbori'">
-                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">繁華美食</span>
+                             alt="Crab Banquet" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/141c27/ffffff?text=Osaka+Crab'">
+                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">包場迎賓宴</span>
                     </div>
                     <div class="p-5">
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">道頓堀 & 心齋橋</h3>
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">道頓堀 螃蟹海鮮歡慶宴</h3>
                         <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                            大阪最著名的美食與購物天堂！章魚燒、串炸、大阪燒等美食一網打盡，享受最道地的大阪文化。
+                            包廂預約螃蟹名店，享用帝王蟹鍋物與清酒暢飲，舉辦熱鬧的 29 人團隊慶功晚宴。
                         </p>
                     </div>
                 </div>
-                <!-- Card 3 -->
+
                 <div class="glass-card rounded-2xl overflow-hidden group">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1565031491910-e57fac031c41?q=80&w=800&auto=format&fit=crop" 
-                             alt="Osaka Castle" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x400/18202c/ffffff?text=Osaka+Castle'">
-                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">雄偉地標</span>
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" 
+                             alt="Ritz-Carlton Osaka" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/141c27/ffffff?text=Osaka+Hotel'">
+                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">國際五星</span>
                     </div>
                     <div class="p-5">
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">大阪城天守閣</h3>
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">大阪城 & 梅田高空景觀</h3>
                         <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                            充滿戰國歷史氣息的景點，環繞於壯麗的天守閣與護城河景觀公園，享受舒適的健走散策。
+                            搭配大阪城護城河御座船與梅田空中庭園 360 度觀景，兼具歷史感與現代高空視覺衝擊。
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Kobe Content (Hidden by default) -->
+            <!-- Kobe Content -->
             <div id="kobe" class="city-content hidden grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Card 1 -->
                 <div class="glass-card rounded-2xl overflow-hidden group">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1528164344705-475426879e0d?q=80&w=800&auto=format&fit=crop" 
-                             alt="Kobe Port" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x400/18202c/ffffff?text=Kobe+Port'">
-                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">浪漫港灣</span>
+                             alt="Kobe Yacht" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/141c27/ffffff?text=Kobe+Yacht'">
+                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">29人包船</span>
                     </div>
                     <div class="p-5">
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">神戶港夜景 & 馬賽克廣場</h3>
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">神戶港 私人遊艇夕陽派對</h3>
                         <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                            名列日本璀璨夜景之一，安排港灣遊船晚宴，吹著海風享受極致的歐式異國浪漫氛圍。
+                            專屬包租豪華遊艇，於神戶港灣吹著微風品嚐香檳，欣賞夕陽與夜景交織的浪漫時刻。
                         </p>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="glass-card rounded-2xl overflow-hidden group">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800&auto=format&fit=crop" 
-                             alt="Arima Onsen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x400/18202c/ffffff?text=Arima+Onsen'">
-                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">日本三大古湯</span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">有馬溫泉 遇見金湯銀湯</h3>
-                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                            古老且著名的溫泉名勝，一洗平日工作積累的疲憊，享用溫泉會席料理與精緻日式服務。
-                        </p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
+
                 <div class="glass-card rounded-2xl overflow-hidden group">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" 
                              alt="Kobe Beef" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                             onerror="this.src='https://placehold.co/600x400/18202c/ffffff?text=Kobe+Beef'">
-                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">美食饗宴</span>
+                             onerror="this.src='https://placehold.co/600x400/141c27/ffffff?text=Kobe+Beef'">
+                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">BMS 10+ 神戶牛</span>
                     </div>
                     <div class="p-5">
-                        <h3 class="text-xl font-bold mb-2 text-slate-100">神戶和牛 鐵板燒晚宴</h3>
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">A5神戶牛 專屬鐵板包場秀</h3>
                         <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
-                            嚴選頂級 A5 級神戶牛，主廚現場精緻烹調，入口即化的油花口感，為員工旅遊畫上奢華句點。
+                            嚴選 BMS 10+ 級最高等神戶牛，主廚現場於 29 人專屬鐵板檯演出火焰與刀工秀。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=800&auto=format&fit=crop" 
+                             alt="Arima Villa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x400/141c27/ffffff?text=Arima+Villa'">
+                        <span class="absolute top-3 left-3 bg-jp-dark/80 backdrop-blur-md text-jp-gold text-xs px-3 py-1 rounded-full font-semibold">日本古湯名宿</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2 text-slate-100">六甲山纜車 & 有馬奢華 Villa</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                            搭纜車俯瞰港灣風景，入住有馬溫泉獨享金湯銀湯名湯，品嚐一對一的女將精緻懷石料理。
                         </p>
                     </div>
                 </div>
@@ -497,105 +683,16 @@
         </div>
     </section>
 
-    <!-- Detailed Itinerary Timeline Section -->
-    <section id="itinerary" class="py-20 border-t border-slate-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-jp-gold text-sm font-semibold uppercase tracking-widest">Sample Itinerary</span>
-                <h2 class="text-3xl sm:text-4xl font-bold mt-2">經典 5 天 4 夜 行程範本</h2>
-                <p class="text-slate-400 mt-2">兼顧節奏舒緩與精緻體驗的理想企劃</p>
-            </div>
-
-            <!-- Timeline -->
-            <div class="relative border-l-2 border-slate-800 ml-4 md:ml-32 space-y-12">
-                
-                <!-- Day 1 -->
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-jp-gold flex items-center justify-center text-jp-dark text-xs font-bold">1</div>
-                    <div class="hidden md:block absolute -left-32 top-0 text-slate-400 text-sm font-bold w-24 text-right">DAY 1</div>
-                    <div class="glass-panel p-6 rounded-2xl">
-                        <span class="md:hidden text-jp-gold font-bold text-xs block mb-1">DAY 1</span>
-                        <h3 class="text-xl font-bold text-slate-100 mb-2">啟程關西 ✕ 大阪繁華夜色</h3>
-                        <p class="text-slate-300 text-sm mb-3">關西國際機場 (KIX) 抵達 ➔ 專車接送至飯店 Check-in ➔ 道頓堀美食探索與慶功歡迎晚宴。</p>
-                        <div class="flex flex-wrap gap-2 text-xs text-slate-400">
-                            <span class="bg-slate-800 px-2.5 py-1 rounded-md"><i class="fa-solid fa-utensils text-jp-gold mr-1"></i>餐食: 大阪海鮮鍋物晚宴</span>
-                            <span class="bg-slate-800 px-2.5 py-1 rounded-md"><i class="fa-solid fa-bed text-jp-gold mr-1"></i>住宿: 大阪市區四星級飯店</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Day 2 -->
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-jp-gold flex items-center justify-center text-jp-dark text-xs font-bold">2</div>
-                    <div class="hidden md:block absolute -left-32 top-0 text-slate-400 text-sm font-bold w-24 text-right">DAY 2</div>
-                    <div class="glass-panel p-6 rounded-2xl">
-                        <span class="md:hidden text-jp-gold font-bold text-xs block mb-1">DAY 2</span>
-                        <h3 class="text-xl font-bold text-slate-100 mb-2">歡樂體驗 ✕ 日本環球影城 USJ 狂歡</h3>
-                        <p class="text-slate-300 text-sm mb-3">全日暢玩日本環球影城 (包含任天堂世界入場) ➔ 晚上自由於心齋橋商圈血拼購物。</p>
-                        <div class="flex flex-wrap gap-2 text-xs text-slate-400">
-                            <span class="bg-slate-800 px-2.5 py-1 rounded-md"><i class="fa-solid fa-utensils text-jp-gold mr-1"></i>餐食: 園區自理 / 居酒屋歡聚餐</span>
-                            <span class="bg-slate-800 px-2.5 py-1 rounded-md"><i class="fa-solid fa-bed text-jp-gold mr-1"></i>住宿: 大阪市區四星級飯店</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Day 3 -->
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-jp-gold flex items-center justify-center text-jp-dark text-xs font-bold">3</div>
-                    <div class="hidden md:block absolute -left-32 top-0 text-slate-400 text-sm font-bold w-24 text-right">DAY 3</div>
-                    <div class="glass-panel p-6 rounded-2xl">
-                        <span class="md:hidden text-jp-gold font-bold text-xs block mb-1">DAY 3</span>
-                        <h3 class="text-xl font-bold text-slate-100 mb-2">千古京都 ✕ 寺園和服巡禮</h3>
-                        <p class="text-slate-300 text-sm mb-3">專車前往京都 ➔ 清水寺與和服體驗 ➔ 伏見稻荷大社 ➔ 晚上入住有馬溫泉會館享用會席料理。</p>
-                        <div class="flex flex-wrap gap-2 text-xs text-slate-400">
-                            <span class="bg-slate-800 px-2.5 py-1 rounded-md"><i class="fa-solid fa-utensils text-jp-gold mr-1"></i>餐食: 京都豆腐湯花午餐 / 溫泉會席晚宴</span>
-                            <span class="bg-slate-800 px-2.5 py-1 rounded-md"><i class="fa-solid fa-bed text-jp-gold mr-1"></i>住宿: 有馬奢華溫泉旅館</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Day 4 -->
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-jp-gold flex items-center justify-center text-jp-dark text-xs font-bold">4</div>
-                    <div class="hidden md:block absolute -left-32 top-0 text-slate-400 text-sm font-bold w-24 text-right">DAY 4</div>
-                    <div class="glass-panel p-6 rounded-2xl">
-                        <span class="md:hidden text-jp-gold font-bold text-xs block mb-1">DAY 4</span>
-                        <h3 class="text-xl font-bold text-slate-100 mb-2">神戶港灣風情 ✕ 頂級神戶牛尊榮晚宴</h3>
-                        <p class="text-slate-300 text-sm mb-3">神戶北野異人館街 ➔ 馬賽克廣場港灣漫步 ➔ 企業專屬 A5 神戶牛饗宴 ➔ 欣賞神戶千萬夜景。</p>
-                        <div class="flex flex-wrap gap-2 text-xs text-slate-400">
-                            <span class="bg-slate-800 px-2.5 py-1 rounded-md"><i class="fa-solid fa-utensils text-jp-gold mr-1"></i>餐食: 異國風料理 / A5頂級神戶牛晚宴</span>
-                            <span class="bg-slate-800 px-2.5 py-1 rounded-md"><i class="fa-solid fa-bed text-jp-gold mr-1"></i>住宿: 神戶港灣景觀飯店</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Day 5 -->
-                <div class="relative pl-8 md:pl-10">
-                    <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-jp-gold flex items-center justify-center text-jp-dark text-xs font-bold">5</div>
-                    <div class="hidden md:block absolute -left-32 top-0 text-slate-400 text-sm font-bold w-24 text-right">DAY 5</div>
-                    <div class="glass-panel p-6 rounded-2xl">
-                        <span class="md:hidden text-jp-gold font-bold text-xs block mb-1">DAY 5</span>
-                        <h3 class="text-xl font-bold text-slate-100 mb-2">臨空城 Outlet 採買 ✕ 滿載而歸</h3>
-                        <p class="text-slate-300 text-sm mb-3">前往 Rinku Premium Outlets 享受免稅購物樂趣 ➔ 專車接送至關西國際機場 ➔ 賦歸桃園/高雄。</p>
-                        <div class="flex flex-wrap gap-2 text-xs text-slate-400">
-                            <span class="bg-slate-800 px-2.5 py-1 rounded-md"><i class="fa-solid fa-utensils text-jp-gold mr-1"></i>餐食: Outlet 自由享用 / 機上精緻餐點</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Sign-up / Interest Survey Form -->
+    <!-- Sign-up / Survey Form Section -->
     <section id="signup" class="py-20 bg-slate-900/80 relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-jp-gold/20 shadow-2xl relative overflow-hidden">
+            <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-jp-gold/30 shadow-2xl relative overflow-hidden">
                 <div class="absolute -right-20 -bottom-20 w-60 h-60 bg-jp-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
                 <div class="text-center mb-10">
-                    <h2 class="text-3xl font-bold">員工旅遊意願調查與報名表</h2>
-                    <p class="text-slate-400 text-sm mt-2">請填寫您的基本資訊與攜眷需求，以便福委會為大家進行最佳規劃。</p>
+                    <span class="text-jp-gold text-xs font-bold uppercase tracking-widest block mb-1">Registration Survey</span>
+                    <h2 class="text-3xl font-bold">29人團隊 參訪意願與需求調查</h2>
+                    <p class="text-slate-400 text-sm mt-2">（此方案固定規格：29人 ✕ 每人 NT$ 60,000 尊榮旗艦版）</p>
                 </div>
 
                 <form id="survey-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
@@ -606,7 +703,7 @@
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
                                 姓名 <span class="text-jp-red">*</span>
                             </label>
-                            <input type="text" required placeholder="請輸入您的中文姓名" 
+                            <input type="text" required placeholder="請輸入中文姓名" 
                                    class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-jp-gold transition-colors text-sm">
                         </div>
 
@@ -617,12 +714,12 @@
                             </label>
                             <select required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-jp-gold transition-colors text-sm">
                                 <option value="">請選擇部門</option>
-                                <option value="IT">資訊研發部 (IT)</option>
-                                <option value="Marketing">行銷企劃部 (Marketing)</option>
-                                <option value="Sales">業務發展部 (Sales)</option>
-                                <option value="HR">人力資源部 (HR/Admin)</option>
-                                <option value="Finance">財務會計部 (Finance)</option>
-                                <option value="Other">其他部門</option>
+                                <option value="IT">資訊研發部</option>
+                                <option value="Marketing">行銷企劃部</option>
+                                <option value="Sales">業務發展部</option>
+                                <option value="HR">人力資源/行政部</option>
+                                <option value="Finance">財務會計部</option>
+                                <option value="Management">高階管理層</option>
                             </select>
                         </div>
                     </div>
@@ -631,7 +728,7 @@
                         <!-- Phone -->
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                                聯絡電話 / 手機 <span class="text-jp-red">*</span>
+                                聯絡電話 <span class="text-jp-red">*</span>
                             </label>
                             <input type="tel" required placeholder="0912-345-678" 
                                    class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-jp-gold transition-colors text-sm">
@@ -640,13 +737,12 @@
                         <!-- Family Members Count -->
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                                預計攜眷人數 (不含自己)
+                                預計攜眷人數 (不含本人)
                             </label>
                             <select class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-jp-gold transition-colors text-sm">
                                 <option value="0">單人參加 (不攜眷)</option>
                                 <option value="1">攜眷 1 人</option>
                                 <option value="2">攜眷 2 人</option>
-                                <option value="3+">攜眷 3 人以上</option>
                             </select>
                         </div>
                     </div>
@@ -654,7 +750,7 @@
                     <!-- Dietary Restrictions -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                            特殊飲食需求或過敏原 (選填)
+                            特殊飲食需求 (選填)
                         </label>
                         <div class="flex flex-wrap gap-4 text-sm text-slate-300 pt-1">
                             <label class="inline-flex items-center space-x-2 cursor-pointer">
@@ -663,7 +759,7 @@
                             </label>
                             <label class="inline-flex items-center space-x-2 cursor-pointer">
                                 <input type="checkbox" value="no-beef" class="rounded bg-slate-900 border-slate-700 text-jp-gold focus:ring-0">
-                                <span>不吃牛肉</span>
+                                <span>不吃牛肉 (替代為頂級黑豬肉/海鮮)</span>
                             </label>
                             <label class="inline-flex items-center space-x-2 cursor-pointer">
                                 <input type="checkbox" value="seafood-allergy" class="rounded bg-slate-900 border-slate-700 text-jp-gold focus:ring-0">
@@ -675,9 +771,9 @@
                     <!-- Additional Notes -->
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                            其他建議或想去的景點需求
+                            房型或客製化需求備註
                         </label>
-                        <textarea rows="3" placeholder="例如：希望能多排一些購物時間、想要體驗茶道等..." 
+                        <textarea rows="3" placeholder="例如：大床房型需求、兩床房型需求、特定購物加碼行程等..." 
                                   class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-slate-200 focus:outline-none focus:border-jp-gold transition-colors text-sm"></textarea>
                     </div>
 
@@ -685,7 +781,7 @@
                     <button type="submit" 
                             class="w-full py-4 bg-jp-gold text-jp-dark font-bold rounded-xl text-base hover:bg-jp-goldHover transition-all shadow-lg shadow-jp-gold/20 flex items-center justify-center space-x-2">
                         <i class="fa-solid fa-paper-plane"></i>
-                        <span>提交旅遊意願問卷</span>
+                        <span>提交 29 人專屬意願調查表單</span>
                     </button>
 
                 </form>
@@ -693,7 +789,7 @@
                 <!-- Custom Modal / Alert Box for Form Feedback -->
                 <div id="form-alert" class="hidden mt-6 p-4 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-center text-sm">
                     <i class="fa-solid fa-circle-check mr-2"></i>
-                    感謝您的填寫！意願調查已成功送出，福委會將儘速統計彙整。
+                    感謝您的填寫！意願調查已成功登記，福委會籌備小組將儘速為您統計與安排。
                 </div>
 
             </div>
@@ -704,133 +800,15 @@
     <footer class="bg-jp-dark border-t border-slate-800 py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 text-xs sm:text-sm space-y-4">
             <div class="flex items-center justify-center space-x-2 text-slate-400 font-bold text-base">
-                <span class="w-2 h-2 rounded-full bg-jp-gold"></span>
-                <span>京阪神企業員工旅遊企劃小組</span>
+                <span class="w-2.5 h-2.5 rounded-full bg-jp-gold"></span>
+                <span>2027 京阪神企業員工旅遊籌備小組 (29人專案 ✕ $60,000/人)</span>
             </div>
             <p>© 2027 Corporate Keihanshin Trip Planning. All Rights Reserved.</p>
-            <p>本網站由 HTML/Tailwind CSS/JS 打造，為專屬員工旅遊簡報展示頁面。</p>
         </div>
     </footer>
 
     <!-- Interactive JavaScript Script -->
     <script>
-        // Data matrix for dynamic calculation recommendations
-        const budgetConfig = {
-            30000: {
-                tag: '超值精緻版',
-                hotel: '市中心質感3~4星飯店',
-                hotelDesc: '地理位置便利，近地鐵站，方便自由行採買。',
-                transport: 'JR & 關西周遊券 + 部分包車',
-                transportDesc: '兼具彈性與性價比，體驗道地關西電車系統。',
-                dining: '經典大阪燒、拉麵、豪華居酒屋套餐',
-                diningDesc: '品嚐經典在地道地美食饗宴。',
-                highlights: '清水寺散策 + 大阪城天守閣 + 道頓堀美食卡',
-                highlightsDesc: '涵蓋最熱門經典打卡打卡景點。',
-                checklist: [
-                    '<i class="fa-solid fa-check text-jp-gold mr-2"></i>包含每日豐富精緻早餐',
-                    '<i class="fa-solid fa-check text-jp-gold mr-2"></i>免費提供隨身 Wi-Fi 分享器',
-                    '<i class="fa-solid fa-check text-jp-gold mr-2"></i>贈送經典關西交通一日券'
-                ]
-            },
-            40000: {
-                tag: '豪華尊榮版 (熱門推薦)',
-                hotel: '4星高評分飯店 + 1晚有馬溫泉會館',
-                hotelDesc: '兼具交通便利與日式極致溫泉放鬆饗宴。',
-                transport: '全程專屬豪華大巴遊覽車包車',
-                transportDesc: '專屬司機服務，行李隨車免拖拉。',
-                dining: 'A5神戶牛晚宴 + 京都懷石料理',
-                diningDesc: '包含獨立包廂晚宴與歡慶團隊餐會。',
-                highlights: 'USJ 快速通關門票 + 京都和服體驗',
-                highlightsDesc: '免去排隊苦等，享受高效率優質體驗。',
-                checklist: [
-                    '<i class="fa-solid fa-check text-jp-gold mr-2"></i>全程專屬豪華大巴，機場直接接送',
-                    '<i class="fa-solid fa-check text-jp-gold mr-2"></i>日本環球影城門票 + 指定快速通關券',
-                    '<i class="fa-solid fa-check text-jp-gold mr-2"></i>有馬溫泉日式會席料理與精緻晚餐',
-                    '<i class="fa-solid fa-check text-jp-gold mr-2"></i>全程投保高額旅遊平安險與海外突發醫療險'
-                ]
-            },
-            55000: {
-                tag: '頂級奢華旗艦版',
-                hotel: '國際5星級奢華飯店 (如麗思卡爾頓) + 奢華溫泉VILLA',
-                hotelDesc: '享受最高等級服務、景觀房型與極致 SPA 設施。',
-                transport: '頂級 Alphard / 尊榮遊覽車包車服務',
-                transportDesc: '專車點對點尊榮接送，無縫銜接每一站行程。',
-                dining: '米其林星級餐廳 + 頂級神戶牛專屬主廚宴',
-                diningDesc: '極致舌尖體驗，包場獨享尊榮晚宴。',
-                highlights: 'USJ 快速通關7項 + 清水寺包場體驗 + 港灣私人遊艇',
-                highlightsDesc: 'VVIP 客製化專屬體驗，打造無可比擬的員工獎勵之旅。',
-                checklist: [
-                    '<i class="fa-solid fa-check text-jp-gold mr-2"></i>全程商務艙機票優先選位規劃 (視預算調整)',
-                    '<i class="fa-solid fa-check text-jp-gold mr-2"></i>米其林星級餐廳專屬包場晚宴',
-                    '<i class="fa-solid fa-check text-jp-gold mr-2"></i>環球影城 VIP 專屬導覽與全快通體驗',
-                    '<i class="fa-solid fa-check text-jp-gold mr-2"></i>全程專業雙語隨團領隊與攝影師紀錄'
-                ]
-            }
-        };
-
-        let selectedPeople = 25;
-        let selectedBudget = 40000;
-
-        // Initialize UI Elements
-        const peopleSlider = document.getElementById('people-slider');
-        const peopleDisplay = document.getElementById('people-count-display');
-        const totalBudgetDisplay = document.getElementById('total-budget-display');
-        const budgetBtns = document.querySelectorAll('.budget-option-btn');
-
-        // Update Calculator Output Function
-        function updateCalculator() {
-            // Calculate Total Budget
-            const total = selectedPeople * selectedBudget;
-            totalBudgetDisplay.textContent = total.toLocaleString('zh-TW');
-            peopleDisplay.textContent = `${selectedPeople} 人`;
-
-            // Update Dynamic Recommendation Content
-            const config = budgetConfig[selectedBudget];
-            document.getElementById('recommend-tag').textContent = config.tag;
-            document.getElementById('rec-hotel').textContent = config.hotel;
-            document.getElementById('rec-hotel-desc').textContent = config.hotelDesc;
-            document.getElementById('rec-transport').textContent = config.transport;
-            document.getElementById('rec-transport-desc').textContent = config.transportDesc;
-            document.getElementById('rec-dining').textContent = config.dining;
-            document.getElementById('rec-dining-desc').textContent = config.diningDesc;
-            document.getElementById('rec-highlights').textContent = config.highlights;
-            document.getElementById('rec-highlights-desc').textContent = config.highlightsDesc;
-
-            // Render Checklist
-            const checklistContainer = document.getElementById('rec-checklist');
-            checklistContainer.innerHTML = config.checklist.map(item => `<li>${item}</li>`).join('');
-        }
-
-        // Event Listeners for Slider
-        peopleSlider.addEventListener('input', (e) => {
-            selectedPeople = parseInt(e.target.value, 10);
-            updateCalculator();
-        });
-
-        // Event Listeners for Budget Option Buttons
-        budgetBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                budgetBtns.forEach(b => {
-                    b.classList.remove('border-jp-gold', 'bg-jp-gold/10', 'active');
-                    b.classList.add('border-slate-700', 'bg-slate-800/50');
-                    const text = b.querySelector('.font-bold');
-                    if (text) text.className = 'font-bold text-slate-200';
-                    const icon = b.querySelector('.check-icon');
-                    if (icon) icon.className = 'fa-regular fa-circle-check text-slate-600 text-xl check-icon';
-                });
-
-                btn.classList.remove('border-slate-700', 'bg-slate-800/50');
-                btn.classList.add('border-jp-gold', 'bg-jp-gold/10', 'active');
-                const text = btn.querySelector('.font-bold');
-                if (text) text.className = 'font-bold text-jp-gold';
-                const icon = btn.querySelector('.check-icon');
-                if (icon) icon.className = 'fa-solid fa-circle-check text-jp-gold text-xl check-icon';
-
-                selectedBudget = parseInt(btn.getAttribute('data-budget'), 10);
-                updateCalculator();
-            });
-        });
-
         // Destination Tabs Interaction
         const tabBtns = document.querySelectorAll('.city-tab-btn');
         const cityContents = document.querySelectorAll('.city-content');
@@ -865,25 +843,18 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Handle Form Submission Demo
+        // Handle Form Submission
         function handleFormSubmit(event) {
             event.preventDefault();
             const alertBox = document.getElementById('form-alert');
             alertBox.classList.remove('hidden');
             
-            // Scroll smoothly to alert message
             alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-            // Reset form optionally after short delay
             setTimeout(() => {
                 document.getElementById('survey-form').reset();
             }, 3000);
         }
-
-        // Initialize default view calculation on page load
-        window.onload = function() {
-            updateCalculator();
-        };
     </script>
 </body>
 </html>
